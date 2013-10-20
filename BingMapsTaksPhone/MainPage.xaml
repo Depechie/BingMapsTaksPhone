@@ -31,6 +31,8 @@
             <StackPanel>
                 <Button VerticalAlignment="Top" Click="Button_Click">Launch Bing Maps</Button>
                 <Button VerticalAlignment="Top" Click="Button_Click_1">Launch Cimbalino map service</Button>
+                <Button VerticalAlignment="Top" Click="Button_Click_2">Launch Bing Maps with Invariant</Button>
+                <Button VerticalAlignment="Top" Click="Button_Click_3">Launch Bing Maps with Culture</Button>
             </StackPanel>
         </Grid>
     </Grid>

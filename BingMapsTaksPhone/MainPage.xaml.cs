@@ -1,8 +1,9 @@
-﻿using System.Device.Location;
-using System.Windows;
-using Cimbalino.Phone.Toolkit.Services;
+﻿using Cimbalino.Phone.Toolkit.Services;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
+using System.Device.Location;
+using System.Globalization;
+using System.Windows;
 
 namespace BingMapsTaksPhone
 {
@@ -29,6 +30,26 @@ namespace BingMapsTaksPhone
         {
             MapsService mapsService = new MapsService();
             mapsService.Show(_location, _location.ToString(), 9);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MapsService mapsService = new MapsService();
+
+            string search = string.Format("{0},{1}", _location.Latitude.ToString(CultureInfo.InvariantCulture),
+                                          _location.Longitude.ToString(CultureInfo.InvariantCulture));
+
+            mapsService.Show(_location, search, 9);
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MapsService mapsService = new MapsService();
+
+            string search = string.Format("{0},{1}", _location.Latitude.ToString(new CultureInfo("nl-BE")),
+                                          _location.Longitude.ToString(new CultureInfo("nl-BE")));
+
+            mapsService.Show(_location, search, 9);
         }
     }
 }
