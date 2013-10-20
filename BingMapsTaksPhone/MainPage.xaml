@@ -28,7 +28,10 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button VerticalAlignment="Top" Click="Button_Click">Launch Bing Maps</Button>
+            <StackPanel>
+                <Button VerticalAlignment="Top" Click="Button_Click">Launch Bing Maps</Button>
+                <Button VerticalAlignment="Top" Click="Button_Click_1">Launch Cimbalino map service</Button>
+            </StackPanel>
         </Grid>
     </Grid>
  
